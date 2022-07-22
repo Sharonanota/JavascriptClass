@@ -13,11 +13,9 @@ class KioskCalc{
         this.quantity = quantity
         this.fruitsPriceList = {"orange":30,"mango":15,"avocado":40}
         this.getTotalCost = function(){
-            return` ${quantity}  ${fruits} for KES ${quantity*this.price}`
+            return` ${quantity}  ${fruits} for KES ${quantity*this.fruitsPriceList.avocado}`
         }
        }
     }
-    KioskCalc.prototype.price = 50
-
-    var ourKiosk=  new KioskCalc("mango" , 3)
+    var ourKiosk=  new KioskCalc("avocado", 3)
     console.log (ourKiosk.getTotalCost())
