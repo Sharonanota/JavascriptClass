@@ -26,12 +26,12 @@ class Mkulima{
   this.farms.splice(farmIndex, 1);
   }
   this.updateFarm = function(farmId,newFarmId,newFarmName,farmerName,newPhone,newAddress){
-  let specificFarm = this.farms.find(item => item.farmId ===farmId)
-  specificFarm.farmId =newFarmId;
-  specificFarm.farmName =newFarmName;
-  specificFarm.farmer =farmerName;
-  specificFarm.phone =newPhone;
-  specificFarm.address =newAddress;
+  let Farm = this.farms.find(item => item.farmId ===farmId)
+  Farm.farmId =newFarmId;
+  Farm.farmName =newFarmName;
+  Farm.farmer =farmerName;
+  Farm.phone =newPhone;
+  Farm.address =newAddress;
   }
   this.getFarm = (Id)=>{
   console.log(this.farms.find(object=>object.farmId===Id))
@@ -46,10 +46,10 @@ class Mkulima{
   this.product.splice(productIndex, 1);
   }
   this.updateProduct = function(productId,newProductId,newProductName,newPrice){
-  let specificProduct = this.product.find(item => item.productId ===productId)
-  specificProduct.productId =newProductId;
-  specificProduct.productName = newProductName;
-  specificProduct.price = newPrice;
+  let Product = this.product.find(item => item.productId ===productId)
+  Product.productId =newProductId;
+  Product.productName = newProductName;
+  Product.price = newPrice;
   }
   this.getProduct = (Id)=>{
   console.log(this.product.find(object=>object.productId===Id))
@@ -58,8 +58,8 @@ class Mkulima{
   console.log(this.product)
   }
   this.calculateOrderCost = (productId,quantity)=>{
-  let specificProduct = this.product.find(object=>object.productId===productId);
-  console.log(`${quantity} ${specificProduct.productName} for KES ${quantity*specificProduct.price}`);
+  let Product = this.product.find(object=>object.productId===productId);
+  console.log(`${quantity} ${Product.productName} for KES ${quantity*Product.price}`);
   }
   }
   }
